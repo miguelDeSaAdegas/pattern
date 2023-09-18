@@ -1,14 +1,14 @@
 public class ObserverLigne implements Observer {
 
-    int numLigne = 0;
+    int nbrLigne = 0;
 
     @Override
     public void traiterLigne(String ligne) {
-        numLigne++;
+        nbrLigne++;
     }
 
     @Override
     public void envoyerResultat() {
-        System.out.println(numLigne);
+        System.out.println("Nombre de ligne : " + nbrLigne);
     }
 }
