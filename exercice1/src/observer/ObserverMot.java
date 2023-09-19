@@ -1,3 +1,5 @@
+package observer;
+
 public class ObserverMot implements Observer{
 
   int nbrMot = 0;

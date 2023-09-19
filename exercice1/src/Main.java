@@ -1,3 +1,8 @@
+import observer.Observer;
+import observer.ObserverLettre;
+import observer.ObserverLigne;
+import observer.ObserverMot;
+
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -13,6 +18,6 @@ public class Main {
     listObserver.add(observerLettre);
     listObserver.add(observerMot);
 
-    AnalyseurDeTexte.traitementTexte("../testFile.txt",listObserver);
+    AnalyseurDeTexte.traitementTexte("exercice1/testFile.txt",listObserver);
   }
 }

@@ -1,3 +1,5 @@
+package observer;
+
 public class ObserverLettre implements Observer{
 
   int nbrLettre = 0;

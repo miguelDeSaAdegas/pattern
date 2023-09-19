@@ -1,3 +1,5 @@
+package observer;
+
 public class ObserverLigne implements Observer {
 
     int nbrLigne = 0;
