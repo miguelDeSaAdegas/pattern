@@ -2,7 +2,7 @@ package observer;
 
 public class ObserverLigne implements Observer {
 
-    int nbrLigne = 0;
+    private int nbrLigne = 0;
 
     @Override
     public void traiterLigne(String ligne) {

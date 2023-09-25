@@ -9,15 +9,15 @@ import java.util.ArrayList;
 public class Main {
 
   public static void main(String[] args) throws IOException {
+    AnalyseurDeTexte analyseurDeTexte = new AnalyseurDeTexte();
     ObserverLigne observerLigne = new ObserverLigne();
     ObserverLettre observerLettre = new ObserverLettre();
     ObserverMot observerMot = new ObserverMot();
 
-    ArrayList<Observer> listObserver = new ArrayList<>();
-    listObserver.add(observerLigne);
-    listObserver.add(observerLettre);
-    listObserver.add(observerMot);
+    analyseurDeTexte.addObserver(observerLigne);
+    analyseurDeTexte.addObserver(observerLettre);
+    analyseurDeTexte.addObserver(observerMot);
 
-    AnalyseurDeTexte.traitementTexte("exercice1/testFile.txt",listObserver);
+    analyseurDeTexte.traitementTexte("./testFile.txt");
   }
 }

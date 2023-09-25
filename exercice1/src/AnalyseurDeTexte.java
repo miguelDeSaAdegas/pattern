@@ -7,8 +7,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class AnalyseurDeTexte {
+	private ArrayList<Observer> listObserver = new ArrayList<>();
 
-	public static void traitementTexte(String filePath, ArrayList<Observer> listObserver) throws IOException {
+	public void traitementTexte(String filePath) throws IOException {
 		BufferedReader lecteurAvecBuffer = null;
 		String ligne;
 		try {
@@ -32,5 +33,9 @@ public class AnalyseurDeTexte {
 		for (Observer observer : listObserver) {
 			observer.envoyerResultat();
 		}
+	}
+
+	public void addObserver(Observer observer) {
+		listObserver.add(observer);
 	}
 }
