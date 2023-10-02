@@ -9,6 +9,8 @@ public class Main {
             System.out.println("Usage : java ListerMots1 fichier");
             System.exit(1);
         }
-        new ListerMots(args[0]).imprimerSiStrategy(new OuStrategy(new WordStrategy('k'),new LengthStrategy(7),new PalindromeStrategy(),new WordStrategy('b')));
+        Comparator c = new Comparator(new OuStrategy(new WordStrategy('k'),new LengthStrategy(7),new PalindromeStrategy(),new WordStrategy('b')));
+        new ListerMots(args[0]).imprimerSiStrategy(c);
+        System.out.println("nombre de mots: "+ c.getCpt());
     }
 }

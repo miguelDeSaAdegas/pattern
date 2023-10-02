@@ -5,23 +5,25 @@ import java.util.Collections;
 
 public class Comparator implements Strategy{
 
-    private ArrayList<Strategy> strategyArrayList;
+    private Strategy strategy;
     private int cpt;
 
-    public Comparator(Strategy... strategies) {
-        this.strategyArrayList = new ArrayList<>();
+    public Comparator(Strategy strategy) {
+        this.strategy = strategy;
         this.cpt = 0;
 
-        Collections.addAll(strategyArrayList, strategies);
     }
 
     @Override
     public boolean strategyToExecute(String mot) {
-        for (Strategy strategy : strategyArrayList) {
-            if (strategy.strategyToExecute(mot)) {
-                cpt++;
-            }
+        boolean rep = strategy.strategyToExecute(mot);
+        if (rep) {
+            cpt++;
         }
-        return true;
+        return rep;
+    }
+
+    public int getCpt() {
+        return cpt;
     }
 }
