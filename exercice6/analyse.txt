@@ -1,0 +1,32 @@
+Command patern :
+	-Client : Principale
+	-Invoker : JeuDeLaVie
+	-Command : Activite
+	-ConcreteCommand : Meurt, Vie
+	-execute : activer()
+	-Receiver: Cellule
+	-doAction : meurt(), vie()
+Observer :
+	-Observer : Espion
+	-update : UtiliserRenseignements
+	-ConcreteObserver : JeuDeLaVieGUI
+	-Subject : JeuDeLaVie
+	-registerObserver : attacher()
+	-unregisterObserver : detacher()
+	-notifyObserver : prevenirEspions()
+Singleton :
+	-Singleton : EstMorte, EstVivante
+	-GetInstance : GetInstance()
+Visitor :
+	-Client : Principale
+	-Visitor : Parcourir
+	-ConcreteVisitor : ParcourtFort, ParcourtNormal
+	-visit : ParcourtCelluleVivante(), ParcourtCelluleMorte()
+	-Element, ConcreteElement : Cellule
+	-accept : generer()
+State
+	Context: Cellule => request() => vit, meurt, estVivante, toggle, ajouterAuxVoisinsVivants, génère
+	State: Situation => handle() => vit, meurt, estVivante, toggle, ajouterAuxVoisinsVivants, génère
+	ConcreteStateA: EstMorte
+	ConcreteStateB: EstVivante
+	
