@@ -1,15 +1,15 @@
-public interface Robot {
+public interface Robot extends Cloneable {
 	
 	int getCanon(); // retourne la puissance du canon
 
 	int getShield(); // retourne la puissance du bouclier
 
-	int getFreq(); // retourne la fréquence de tir
+	int getFreq(); // retourne la frï¿½quence de tir
 	
 	String getName(); // retourne le nom du robot
 
 	int diffLife(int i); // change les points de vie du robot et retourne la nouvelle valeur de ces points de vie. 
-	 // Si le paramètre est négatif, le robot perd de la vie.
-	 // Si le paramètre est positif, le robot est soigné.
-	 // Si le paramètre est zéro, la méthode agit comme un getter sur les points de vie.
+	 // Si le paramï¿½tre est nï¿½gatif, le robot perd de la vie.
+	 // Si le paramï¿½tre est positif, le robot est soignï¿½.
+	 // Si le paramï¿½tre est zï¿½ro, la mï¿½thode agit comme un getter sur les points de vie.
 }
